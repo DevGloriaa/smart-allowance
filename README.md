@@ -5,6 +5,7 @@ It allows funders (parents or individuals) to deposit stablecoins and release th
 
 ---
 
+
 ## Features
 
 - *Self-Discipline Budgeting*: Restrict your own spending by setting daily/weekly allowance.
@@ -45,14 +46,17 @@ It allows funders (parents or individuals) to deposit stablecoins and release th
 AllowanceBudget smart contract flow:
 
 Funder (Parent / Self) 💰
+
         │
         │ createPlan(totalAmount, allowancePerInterval, interval)
         ▼
 Smart Contract ⛓
+
         │
         │ Stores allowance plan and enforces schedule
         ▼
 Beneficiary (Child / Self) 👶 / 🧑
+
         │
         │ claimAllowance()
         ▼
