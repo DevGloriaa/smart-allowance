@@ -6,7 +6,6 @@ interface IERC20 {
 }
 
 contract AllowanceBudget {
-
     enum AssetType { ETH, TOKEN }
 
     struct AllowancePlan {
