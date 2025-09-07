@@ -9,26 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "account",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -52,12 +33,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "sender",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "recipient",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -91,7 +72,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"AllowanceBudget.sol": "IERC20"
+			"AllowanceBudgetETH.sol": "IERC20"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -105,11 +86,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"AllowanceBudget.sol": {
-			"keccak256": "0x8f09cd9df004812d4027740b4e4958114232b50f8e4c20f9b2476b94568567d2",
+		"AllowanceBudgetETH.sol": {
+			"keccak256": "0xcb1ca7075cbddc80e5f3189d4b618a30b68a1138a65ce5bbcbbe8b9a5fbdd944",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://e9b6e2bd7922e1a4ad9544eaa8991472ec56754a17ac4f810502c78e9328b31b",
-				"dweb:/ipfs/QmbkyuAAG8S95BewTjSEq62jiqYfFDbhpUcXJraWXhX6ib"
+				"bzz-raw://dd4e91262e11baf86f12c4c6cbd918f7b139ab83c3307277416e54ed64a7a549",
+				"dweb:/ipfs/Qme9GwzyACdV8vGSU7LRY7Uv2ybVCTPjXGecnkJGkW243m"
 			]
 		}
 	},

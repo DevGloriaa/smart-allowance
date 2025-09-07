@@ -6,6 +6,80 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"name": "AllowanceClaimed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AllowanceBudget.AssetType",
+						"name": "assetType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "allowancePerInterval",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "interval",
+						"type": "uint256"
+					}
+				],
+				"name": "PlanCreated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "claimAllowance",
 				"outputs": [],
@@ -30,9 +104,42 @@
 						"type": "uint256"
 					}
 				],
-				"name": "createPlan",
+				"name": "createETHPlan",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "allowancePerInterval",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "interval",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "createTokenPlan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -47,32 +154,42 @@
 				"outputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"internalType": "enum AllowanceBudget.AssetType",
+						"name": "assetType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "totalAmount",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "allowancePerInterval",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "interval",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "lastClaimed",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "remainingBalance",
 						"type": "uint256"
 					}
 				],
@@ -92,6 +209,16 @@
 					{
 						"internalType": "address",
 						"name": "funder",
+						"type": "address"
+					},
+					{
+						"internalType": "enum AllowanceBudget.AssetType",
+						"name": "assetType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
 						"type": "address"
 					},
 					{
@@ -137,7 +264,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"AllowanceBudget.sol": "AllowanceBudget"
+			"AllowanceBudgetETH.sol": "AllowanceBudget"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -151,11 +278,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"AllowanceBudget.sol": {
-			"keccak256": "0x8423e13a5e7309bc42ed8702676022474fa993e17f2b4b77d84100f31d571bcd",
+		"AllowanceBudgetETH.sol": {
+			"keccak256": "0xcb1ca7075cbddc80e5f3189d4b618a30b68a1138a65ce5bbcbbe8b9a5fbdd944",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://a67f1a15a19ffa37e1d6a705388ccca4979dc29aad0437b96c1b27aa40a424a2",
-				"dweb:/ipfs/QmbeGePYTC26LP17ZeM86aFqheSNa5oWxZBFoYJkXxv9os"
+				"bzz-raw://dd4e91262e11baf86f12c4c6cbd918f7b139ab83c3307277416e54ed64a7a549",
+				"dweb:/ipfs/Qme9GwzyACdV8vGSU7LRY7Uv2ybVCTPjXGecnkJGkW243m"
 			]
 		}
 	},
