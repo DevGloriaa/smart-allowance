@@ -77,8 +77,8 @@ Funds Released 💵 → Wallet
 ## Getting Started
 
 1. Open [Remix IDE](https://remix.ethereum.org)  
-2. Create a new file AllowanceBudget.sol and paste the contract code.  
-3. Compile using Solidity version 0.8.20.  
+2. Create a new file AllowanceBudget.sol and myToken.sol and paste the contract code.  
+3. Compile using Solidity version 0.8.30.  
 4. Deploy to:
    - *Remix VM (Local Testing)* or  
    - *Ethereum Testnet* (like Sepolia or Goerli using MetaMask).  
