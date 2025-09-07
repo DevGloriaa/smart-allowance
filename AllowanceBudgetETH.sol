@@ -72,6 +72,7 @@ contract AllowanceBudget {
             totalAmount: totalAmount,
             allowancePerInterval: allowancePerInterval,
             interval: interval,
+            
             lastClaimed: block.timestamp,
             remainingBalance: totalAmount
         });
